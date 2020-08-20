@@ -1,0 +1,172 @@
+body {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    /* background-color:rgb(110, 180, 192); */
+    background: linear-gradient(rgba(0,0,50,0.5),rgba(110,180,192,0.5));
+}
+  
+header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    font-size: 3em;
+    transform: translate(-50%, -50%);
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+  
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+}
+
+h1 {
+    position: relative;
+    color: rgb(190, 110, 79);
+    font-size: 2.5em;
+    margin:0;
+    top: 50%;
+}
+
+p {
+    position: relative;
+    top: 40%;
+    color: rgb(0, 0,0);
+    font-size: 2em;
+    margin: 0;
+}
+
+#builder {
+    position: relative;
+    height: 150px;
+}
+
+.register a {
+    position: relative;
+    border-radius: 40px;
+    transition: 0.3s; /* Add transition on hover */
+	transition-duration: 1s;
+    background-color: rgb(190, 110, 79);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+    animation: spin;
+}
+
+.register a:hover{
+    background-color: rgb(187, 136, 133);
+}
+
+.socials a {
+    position: relative;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.typewriter p{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:  
+      typing 4s steps(40, end),
+      blink-caret .35s step-end infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        transform: rotate(180deg);
+    } 
+}
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+@media (min-width: 100px) and (max-width: 1000px) {
+    body {
+        font-size: 26px;
+    }
+    header{
+        position: absolute;
+        top:200px;
+        transform: translate(-50%, -50%);
+    }
+    h1{
+        top:80%;
+    }
+    p{
+        top:20%;
+    }
+    #builder {
+        position: relative;
+        height: 400px;
+        margin:0;
+        top: -20%;
+    }
+    .register a {
+        position: absolute;
+        top: 75%;
+        height: 80px;
+        width: 500px;
+        left: 50%;
+        bottom: -200px;
+        border: none;
+        background-color: rgb(190, 110, 79);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2em;
+        font-weight: 600;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+
+    }
+    footer{
+        white-space: nowrap;
+    }
+    .socials img {
+        position: absolute;
+        bottom: 250px;
+        height: 50px;
+        width: 50px;
+    }
+}
+
